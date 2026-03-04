@@ -49,6 +49,9 @@ https://developer.wordpress.org/themes/
 
 - télécharger wordpress v.6.9.1 (www.wordpress.org)
 - Déposer le dossier dans `C:wamp64/www/`
+- Cliquer sur StartWamp sur le bureau
+- Ouvrir le navigateur et aller sur `http://localhost`
+- Cliquer sur phpmyadmin
 - Créer une base de données (phpmyadmin) - login: "root", mdp: ""
 - Lancer l'installation de wordpress
 
