@@ -45,6 +45,15 @@ https://developer.wordpress.org/themes/
 
 ---
 
+## Installation sur Wamp en R04 uniquement
+
+- télécharger wordpress v.6.9.1 (www.wordpress.org)
+- Déposer le dossier dans `C:wamp64/www/`
+- Créer une base de données (phpmyadmin) - login: "root", mdp: ""
+- Lancer l'installation de wordpress
+
+---
+
 ## B. Réalisation d'un thème Block FSE
 
 ➡️ Dans le dossier `wp-content/themes/`, créez un nouveau dossier pour votre thème, par exemple `mon-theme`. Ce dossier contiendra tous les fichiers nécessaires pour votre thème.
