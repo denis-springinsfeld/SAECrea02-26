@@ -1,11 +1,11 @@
 <?php
 /**
- *  Theme - Fichier de fonctions principales
+ *  <Theme> - Fichier de fonctions principales
  *
  * Ce fichier contient toutes les fonctions personnalisées du thème,
  * notamment l'enregistrement des styles et scripts.
  *
- * @package Theme
+ * @package <Theme>
  * @since 1.0.0
  */
 
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enregistre et charge la feuille de style principale du thème.
  *
  * Utilise wp_enqueue_style() pour charger style.css avec :
- * - Un identifiant unique 'but-style'
+ * - Un identifiant unique '<theme>-style'
  * - Le chemin vers style.css via get_stylesheet_uri()
  * - Aucune dépendance
  * - La version du thème pour le cache-busting
@@ -29,15 +29,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 
-function theme_style() {
+function <theme>_style() {
     wp_enqueue_style(
-        'theme-style',                              // Identifiant unique du style
+        '<theme>-style',                              // Identifiant unique du style
         get_stylesheet_uri(),                     // URL vers style.css
         array(),                                  // Pas de dépendances
         time()                                    // <--- BUST DU CACHE ULTRA PUISSANT
     );
 }
-add_action( 'wp_enqueue_scripts', 'theme_style' );
+add_action( 'wp_enqueue_scripts', '<theme>_style' );
 
 
 /**
@@ -49,10 +49,10 @@ add_action( 'wp_enqueue_scripts', 'theme_style' );
  * @since 1.0.0
  * @return void
  */
-function apple_enqueue_editor_styles() {
+function <theme>_enqueue_editor_styles() {
     add_editor_style( 'style.css' );
 }
-add_action( 'after_setup_theme', 'apple_enqueue_editor_styles' );
+add_action( 'after_setup_theme', '<theme>_enqueue_editor_styles' );
 
 
 /**
@@ -68,16 +68,16 @@ add_action( 'after_setup_theme', 'apple_enqueue_editor_styles' );
  * @since 1.0.0
  * @return void
  */
-function theme_scripts() {
+function <theme>_scripts() {
     wp_enqueue_script(
-        'theme-scripts',                                    // Identifiant unique du script
+        '<theme>-scripts',                                    // Identifiant unique du script
         get_template_directory_uri() . '/assets/js/app.js', // Chemin vers le fichier JS
         array(),                                            // Pas de dépendances
         time(),                                             // <--- BUST DU CACHE ULTRA PUISSANT
         true                                                // Charger dans le footer
     );
 }
-add_action( 'wp_enqueue_scripts', 'apple_scripts' );
+add_action( 'wp_enqueue_scripts', '<theme>_scripts' );
 
 
 add_filter( 'block_editor_settings_all', function( $settings ) {
