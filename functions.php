@@ -1,7 +1,7 @@
 <?php
 /**
  *  <Theme> - Fichier de fonctions principales
- *
+ * ⚠️ Adaptez <Theme> au nom de votre thème !
  * Ce fichier contient toutes les fonctions personnalisées du thème,
  * notamment l'enregistrement des styles et scripts.
  *
